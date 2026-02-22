@@ -1,0 +1,52 @@
+/* Шапка */
+.header__wrapper {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+
+}
+
+/* Сетка выбора алфавита */
+.letters {
+    margin-bottom: 50px;
+}
+
+.letters__wrap {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px; */
+}
+
+/* Карточки алфавитов */
+.letters__card {
+    padding: 35px 70px;
+    display: block;
+    position: relative;
+
+    border-radius: 20px;
+    overflow: hidden;
+    text-decoration: none;
+    background: white;
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.08);
+    border: 2px solid transparent;
+    color: inherit;
+    
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+}
+.letters__card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+#let_a:hover {
+    border-color: #ff6b8b; 
+}
+
+.letters__name {
+    font-size: 2.2rem;
+    color: #2c3e50;
+}

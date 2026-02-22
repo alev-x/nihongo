@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">り</title>
+    <link rel="stylesheet" href="./../../../css/card.css">
+    <link rel="stylesheet" href="./../../../css/style.css">
+
+
+</head>
+<body>
+    <div>
+        
+        <div class="navigation__main">
+                <button type="button" class="navigation__main-btn tabs__button active">
+                    Японско-русский
+                </button>
+                <button type="button" class="navigation__main-btn tabs__button">
+                    Русско-японский
+                </button>
+        </div>
+
+        <!-- Контейнер с 3D-перспективой -->
+        <div class="card-container">
+            <!-- Сама карточка. По клику ей добавится класс .flipped -->
+            <div class="card" id="flashcard" onclick="flipCard()">
+                <div class="card-front" id="front-text">
+                    こんにちは
+                </div>
+                <div class="card-back" id="back-text">
+                    Здравствуйте
+                </div>
+            </div>
+        </div>
+
+        <!-- Панель навигации -->
+        <div class="navigation">
+            <div class="navigation__cards">
+                <button class="navigation__cards-btn" onclick="prevCard()">← Назад</button>
+                <span id="status">Карточка 1 из 3</span>
+                <button class="navigation__cards-btn" onclick="nextCard()">Вперёд →</button>
+            </div>
+            <div class="navigation__main">
+                <a href="./../row_ra.html">
+                    <button class="navigation__main-btn">Буквы</button>
+                </a>
+                <button class="navigation__main-btn" onclick="reshuffleDeck()">Перемешать</button>
+                <a href="./../../hiragana.html">
+                    <button class="navigation__main-btn">Ряды</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./../../../js/change.js"></script>
+    <script src="./../../../js/allData.js"></script>
+    <script src="./../../../js/card.js"></script>
+</body>
+</html>

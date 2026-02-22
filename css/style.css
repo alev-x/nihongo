@@ -1,0 +1,136 @@
+/* Базовые настройки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Noto Sans JP', Tahoma, Geneva, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    padding: 20px;
+    min-height: 100vh;
+    
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+    color: #333;
+}
+
+/* Основной контейнер */
+.container {
+    max-width: 1200px;
+    width: 100%;
+
+    padding: 40px;
+    margin: 0 auto;
+    
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+/* Шапка */
+.header {
+    margin-bottom: 50px;
+    
+    text-align: center;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.header__title {
+    margin-bottom: 12px;
+    
+    font-size: 2.8rem;
+    
+    color: #2c3e50;
+}
+
+.header__subtitle {
+    max-width: 600px;
+    margin: 0 auto;
+
+    font-size: 1.2rem;
+    line-height: 1.5;
+    
+    color: #7f8c8d;
+}
+
+/* Сетка выбора алфавита */
+.alphabet {
+    margin-bottom: 50px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* Карточки алфавитов */
+.alphabet__card {
+    padding: 35px 30px;
+    display: block;
+    position: relative;
+
+    border-radius: 20px;
+    overflow: hidden;
+    text-decoration: none;
+    background: white;
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.08);
+    border: 2px solid transparent;
+    color: inherit;
+    
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+}
+.alphabet__card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+#hiragana:hover {
+    border-color: #ff6b8b; 
+}
+#katakana:hover { 
+    border-color: #4ecdc4; 
+}
+#kanji:hover { 
+    border-color: #ffa502; 
+}
+
+.alphabet__name {
+    font-size: 2.2rem;
+    color: #2c3e50;
+}
+
+/* Футер */
+.footer-note {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #95a5a6;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+    }
+    
+    .header__title {
+        font-size: 2.2rem;
+    }
+    
+    .alphabet {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .alphabet__card {
+        padding: 25px 20px;
+    }
+    
+    .alphabet__name {
+        font-size: 1.9rem;
+    }
+}
