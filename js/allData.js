@@ -612,28 +612,30 @@ const allData = [
         { japanese: "カー", russian: "автомобиль" },
         { japanese: "カード", russian: "карточка, документ" }
     ],
-    [// индекс 106 - null
-        { japanese: "0", russian: "0" }
+    [// индекс 106 - ガ
+        { japanese: "ガ", russian: "стекло" },
+        { japanese: "ガ", russian: "учение, наука" },
+        { japanese: "ガ", russian: "газ (gas)" }
     ],
     [// индекс 107 - キ
         { japanese: "キン (on 近)", russian: "близкий, ближний (о расстоянии)" },
         { japanese: "キー", russian: "ключ; клавиша(компьютер)" },
         { japanese: "キオスク", russian: "киоск" }
     ],
-    [// индекс 108 - null
-        { japanese: "0", russian: "0" }
+    [// индекс 108 - ギ
+        { japanese: "ギ", russian: "ギ" }
     ],
     [// индекс 109 - ク
         { japanese: "クラス", russian: "класс" }
     ],
-    [// индекс 110 - null
-        { japanese: "0", russian: "0" }
+    [// индекс 110 - グ
+        { japanese: "グ", russian: "グ" }
     ],
     [// индекс 111 - ケ
         { japanese: "ケーキ", russian: "пирожное" }
     ],
-    [// индекс 112 - null
-        { japanese: "0", russian: "0" }
+    [// индекс 112 - ゲ
+        { japanese: "ゲ", russian: "гость (guest)" }
     ],
     [// индекс 113 - コ
         { japanese: "コーヒ", russian: "кофе" },
@@ -646,8 +648,8 @@ const allData = [
         { japanese: "コクコ", russian: "кокс" },
         { japanese: "コスト", russian: "расходы(cost)" }
     ],
-    [// индекс 114 - null
-        { japanese: "0", russian: "0" }
+    [// индекс 114 - ゴ
+        { japanese: "ゴ", russian: "язык, речь" }
     ],
     [// индекс 115 - null
         { japanese: "0", russian: "0" }
