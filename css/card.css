@@ -122,15 +122,6 @@ body {
     background-color: #4d3885;
 }
 
-.tabs__button {
-    /* padding-inline: 30px;
-    font-size: 16px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    background-color: #92A0AD;
-    border-radius: 4px; */
-}
 
 .tabs__button.active {
     background-color: #982EB6;
@@ -140,4 +131,53 @@ body {
     align-self: center;
     font-weight: bold;
     color: #555;
+}
+
+/* ========== АДАПТАЦИЯ ДЛЯ МОБИЛЬНЫХ ========== */
+@media (max-width: 480px) {
+    body {
+        padding: 10px; /* Уменьшаем отступы по бокам */
+    }
+
+    /* Карточка занимает всю ширину, сохраняя пропорции */
+    .card-container {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 2 / 1; /* 400x200 → соотношение 2:1 */
+        margin-bottom: 20px;
+    }
+
+    /* Текст на карточке уменьшаем, чтобы не вылезал */
+    .card-front,
+    .card-back {
+        font-size: 1.8rem;
+        padding: 10px;
+    }
+
+    /* Навигация: ширина 100%, кнопки могут переноситься */
+    .navigation__cards,
+    .navigation__main {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin: 15px 0;
+    }
+
+    /* Кнопки занимают доступное место, но не мельчают */
+    .navigation__cards-btn,
+    .navigation__main-btn {
+        flex: 1 1 auto;         /*Каждый параметр: grow, shrink, basis*/
+        min-width: 120px;
+        text-align: center;
+        padding: 10px 15px;
+        font-size: 0.95rem;
+    }
+
+    /* Статус по центру */
+    #status {
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+    }
 }
