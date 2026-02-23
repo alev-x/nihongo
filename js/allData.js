@@ -570,64 +570,81 @@ const allData = [
         { japanese: "0", russian: "0" }
     ],
     [// индекс 96 - ア
-        { japanese: "ア", russian: "темный" },
-        { japanese: "ア", russian: "спокойный, устойчивый, дешевый" },
-        { japanese: "ア", russian: "искусство(art)" },
-        { japanese: "ア", russian: "лед(ice)" },
-        { japanese: "ア", russian: "акация(acacia)" },
-        { japanese: "ア", russian: "вне(out)" },
-        { japanese: "ア", russian: "глаз(eye)" }
+        { japanese: "アン (on 暗)", russian: "темный" },
+        { japanese: "アン (on 安)", russian: "спокойный, устойчивый, дешевый" },
+        { japanese: "アート", russian: "искусство(art)" },
+        { japanese: "アアイス", russian: "лед(ice)" },
+        { japanese: "アカシア", russian: "акация(acacia)" },
+        { japanese: "アウト", russian: "вне(out)" },
+        { japanese: "アイ", russian: "глаз(eye)" }
     ],
     [// индекс 97 - null
         { japanese: "0", russian: "0" }
     ],
     [// индекс 98 - イ
-        { japanese: "イ", russian: "И" }
+        { japanese: "イタリア", russian: "Италия" },
+        { japanese: "イタリイゴ", russian: "итальянский язык" },
+        { japanese: "イギリス", russian: "Англия" }
     ],
     [// индекс 99 - null
         { japanese: "0", russian: "0" }
     ],
     [// индекс 100 - ウ
-        { japanese: "ウ", russian: "У" }
+        { japanese: "ウクライナ", russian: "Украина" },
+        { japanese: "ウクライナゴ", russian: "украинский язык" }
     ],
     [// индекс 101 - null
         { japanese: "0", russian: "0" }
     ],
     [// индекс 102 - エ
-        { japanese: "エ", russian: "э" }
+        { japanese: "エイ (on )", russian: "Англия (в сочетании)" },
+        { japanese: "エア", russian: "воздух (air)" }
     ],
     [// индекс 103 - null
         { japanese: "0", russian: "0" }
     ],
     [// индекс 104 - オ
-        { japanese: "オ", russian: "о" }
+        { japanese: "オーケー", russian: "хорошо, окэй" }
     ],
     [// индекс 105 - カ
-        { japanese: "カ", russian: "ка" }
+        { japanese: "カ (on 何)", russian: "что" },
+        { japanese: "カメラマン", russian: "фотограф" },
+        { japanese: "カー", russian: "автомобиль" },
+        { japanese: "カード", russian: "карточка, документ" }
     ],
     [// индекс 106 - null
         { japanese: "0", russian: "0" }
     ],
     [// индекс 107 - キ
-        { japanese: "キ", russian: "ки" }
+        { japanese: "キン (on 近)", russian: "близкий, ближний (о расстоянии)" },
+        { japanese: "キー", russian: "ключ; клавиша(компьютер)" },
+        { japanese: "キオスク", russian: "киоск" }
     ],
     [// индекс 108 - null
         { japanese: "0", russian: "0" }
     ],
     [// индекс 109 - ク
-        { japanese: "ク", russian: "ку" }
+        { japanese: "クラス", russian: "класс" }
     ],
     [// индекс 110 - null
         { japanese: "0", russian: "0" }
     ],
     [// индекс 111 - ケ
-        { japanese: "ケ", russian: "кэ" }
+        { japanese: "ケーキ", russian: "пирожное" }
     ],
     [// индекс 112 - null
         { japanese: "0", russian: "0" }
     ],
-    [// индекс 113 - null
-        { japanese: "0", russian: "0" }
+    [// индекс 113 - コ
+        { japanese: "コーヒ", russian: "кофе" },
+        { japanese: "コウ (on 校)", russian: "школа" },
+        { japanese: "コウ (on 高)", russian: "высокий, дорогой (о цене)" },
+        { japanese: "コク (on 黒)", russian: "черный" },
+        { japanese: "コウ (on 広)", russian: "просторный, обширный" },
+        { japanese: "ココア", russian: "какао(напиток)" },
+        { japanese: "コーチ", russian: "тренер" },
+        { japanese: "コクコ", russian: "кокс" },
+        { japanese: "コスト", russian: "расходы(cost)" }
     ],
     [// индекс 114 - null
         { japanese: "0", russian: "0" }
