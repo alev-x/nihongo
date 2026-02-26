@@ -651,13 +651,123 @@ const allData = [
     [// индекс 114 - ゴ
         { japanese: "ゴ", russian: "язык, речь" }
     ],
-    [// индекс 115 - null
+    [// индекс 115 - サ
+        { japanese: "サン", russian: "гора" },
+        { japanese: "サイズ", russian: "размер" },
+        { japanese: "サイド", russian: "сторона" },
+        { japanese: "サイト", russian: "место, местонахождение" }
+    ],
+    [// индекс 116 - ザ
+        { japanese: "ザ", russian: "ザ" }
+    ],
+    [// индекс 117 - シ
+        { japanese: "ショウ", russian: "рождение, появление" },
+        { japanese: "シ", russian: "ребенок" },
+        { japanese: "ショウ", russian: "маленький" },
+        { japanese: "ショウ", russian: "голубой, светло-зеленый" }
+    ],
+    [// индекс 118 - ジ
+        { japanese: "ジュース", russian: "сок" },
+        { japanese: "ジョ", russian: "женщина" },
+        { japanese: "ジン", russian: "человек, люди" },
+        { japanese: "ジグザグ", russian: "зигзаг" }
+    ],
+    [// индекс 119 - ス
+        { japanese: "ス`カート", russian: "юбка" },
+        { japanese: "ス`キー", russian: "лыжи" },
+        { japanese: "ス`ク`ー`ト", russian: "коньки" },
+        { japanese: "ス`タ`ジ`オ", russian: "студия" },
+        { japanese: "スター", russian: "звезда" },
+        { japanese: "スーツ", russian: "костюм" },
+        { japanese: "スチージ", russian: "сцена" },
+        { japanese: "スタート", russian: "старт" }
+    ],
+    [// индекс 120 - ズ
+        { japanese: "ズ", russian: "ズ" }
+    ],
+    [// индекс 121 - セ
+        { japanese: "セイ", russian: "рождение, появление" },
+        { japanese: "セン", russian: "река" },
+        { japanese: "セン", russian: "прошлый, раньше, прежде" },
+        { japanese: "セキ", russian: "красный" },
+        { japanese: "セイ", russian: "голубой, светло-зеленый" },
+        { japanese: "セクト", russian: "политическая группировка, секта" }
+    ],
+    [// индекс 122 - ゼ
+        { japanese: "ゼ", russian: "ゼ" }
+    ],
+    [// индекс 123 - ソ
+        { japanese: "ソーダ", russian: "сода" }
+    ],
+    [// индекс 124 - ゾ
+        { japanese: "ゾ", russian: "ゾ" }
+    ],
+    [// индекс 125 - タ
+        { japanese: "`タクツ", russian: "такси" },
+        { japanese: "タイ", russian: "большой, великий" },
+        { japanese: "タスク", russian: "задание" }
+    ],
+    [// индекс 126 - ダ
+        { japanese: "ダ", russian: "ダ" }
+    ],
+    [// индекс 127 - チ
+        { japanese: "チ", russian: "チ" }
+    ],
+    [// индекс 128 - ヂ
+        { japanese: "ヂ", russian: "ヂ" }
+    ],
+    [// индекс 129 - null
         { japanese: "0", russian: "0" }
     ],
-    [// индекс 116 - null
+    [// индекс 130 - ツ
+        { japanese: "ツ", russian: "ツ" }
+    ],
+    [// индекс 131 - ヅ
+        { japanese: "ヅ", russian: "ヅ" }
+    ],
+    [// индекс 132 - テ
+        { japanese: "テ", russian: "テ" }
+    ],
+    [// индекс 133 - デ
+        { japanese: "デ", russian: "デ" }
+    ],
+    [// индекс 134 - ト
+        { japanese: "ト", russian: "ト" }
+    ],
+    [// индекс 135 - ド
+        { japanese: "ド", russian: "ド" }
+    ],
+    [// индекс 136 - ナ
+        { japanese: "ナ", russian: "ナ" }
+    ],
+    [// индекс 137 - ニ
+        { japanese: "ニ", russian: "ニ" }
+    ],
+    [// индекс 138 - ヌ
+        { japanese: "ヌ", russian: "ヌ" }
+    ],
+    [// индекс 139 - ネ
+        { japanese: "ネ", russian: "ネ" }
+    ],
+    [// индекс 140 - ノ
+        { japanese: "ノ", russian: "ノ" }
+    ],
+    [// индекс 141 - null
         { japanese: "0", russian: "0" }
     ],
-    [// индекс 117 - null
+    [// индекс 142 - null
         { japanese: "0", russian: "0" }
     ],
+    [// индекс 143 - null
+        { japanese: "0", russian: "0" }
+    ],
+    [// индекс 144 - null
+        { japanese: "0", russian: "0" }
+    ],
+    [// индекс 145 - null
+        { japanese: "0", russian: "0" }
+    ],
+    [// индекс 146 - null
+        { japanese: "0", russian: "0" }
+    ]
 ];
