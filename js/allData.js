@@ -58,7 +58,7 @@ const allData = [
         { japanese: "いう", russian: "говорить, сказать, называться (глаг)" },
         { japanese: "いちにち", russian: "один день; целый день, первое число месяца" }
     ],
-    [// индекс 3 --- null ---
+    [// индекс 3 --- ПУСТО ---
         { japanese: "0", russian: "0" }
     ],
     [// индекс 4 - う
@@ -613,9 +613,9 @@ const allData = [
         { japanese: "カード", russian: "карточка, документ" }
     ],
     [// индекс 106 - ガ
-        { japanese: "ガ", russian: "стекло" },
-        { japanese: "ガ", russian: "учение, наука" },
-        { japanese: "ガ", russian: "газ (gas)" }
+        { japanese: "ガラス", russian: "стекло" },
+        { japanese: "ガク", russian: "учение, наука" },
+        { japanese: "ガス", russian: "газ (gas)" }
     ],
     [// индекс 107 - キ
         { japanese: "キン (on 近)", russian: "близкий, ближний (о расстоянии)" },
@@ -635,7 +635,7 @@ const allData = [
         { japanese: "ケーキ", russian: "пирожное" }
     ],
     [// индекс 112 - ゲ
-        { japanese: "ゲ", russian: "гость (guest)" }
+        { japanese: "ゲスト", russian: "гость (guest)" }
     ],
     [// индекс 113 - コ
         { japanese: "コーヒ", russian: "кофе" },
@@ -708,10 +708,13 @@ const allData = [
         { japanese: "タスク", russian: "задание" }
     ],
     [// индекс 126 - ダ
-        { japanese: "ダ", russian: "ダ" }
+        { japanese: "ダン", russian: "мужчина" },
+        { japanese: "ダイ", russian: "большой, великий" }
     ],
     [// индекс 127 - チ
-        { japanese: "チ", russian: "チ" }
+        { japanese: "チョコレート", russian: "шоколад" },
+        { japanese: "チョウ", russian: "город, квартал" },
+        { japanese: "チーズ", russian: "сыр" }
     ],
     [// индекс 128 - ヂ
         { japanese: "ヂ", russian: "ヂ" }
@@ -723,25 +726,34 @@ const allData = [
         { japanese: "ツ", russian: "ツ" }
     ],
     [// индекс 131 - ヅ
-        { japanese: "ヅ", russian: "ヅ" }
+        { japanese: "ヅツ", russian: "день, солнце" }
     ],
     [// индекс 132 - テ
-        { japanese: "テ", russian: "テ" }
+        { japanese: "テレビ", russian: "телевизор" },
+        { japanese: "テイ", russian: "чай" },
+        { japanese: "テシャツ", russian: "футболка" },
+        { japanese: "テスト", russian: "тест, экзамен" }
     ],
     [// индекс 133 - デ
-        { japanese: "デ", russian: "デ" }
+        { japanese: "デイスク", russian: "диск" },
+        { japanese: "データ", russian: "данные" },
+        { japanese: "デート", russian: "свидание" }
     ],
     [// индекс 134 - ト
-        { japanese: "ト", russian: "ト" }
+        { japanese: "ト", russian: "группа людей, последователь, хотьба" },
+        { japanese: "トスト", russian: "подсушеный ломтик хлеба" }
     ],
     [// индекс 135 - ド
-        { japanese: "ド", russian: "ド" }
+        { japanese: "ドア", russian: "дверь" },
+        { japanese: "ドクタ", russian: "врач, доктор" }
     ],
     [// индекс 136 - ナ
-        { japanese: "ナ", russian: "ナ" }
+        { japanese: "ナン", russian: "мужчина" }
     ],
     [// индекс 137 - ニ
-        { japanese: "ニ", russian: "ニ" }
+        { japanese: "ニチ", russian: "день, солнце" },
+        { japanese: "ニ", russian: "день, солнце" },
+        { japanese: "ニン", russian: "человек, люди" }
     ],
     [// индекс 138 - ヌ
         { japanese: "ヌ", russian: "ヌ" }
@@ -750,24 +762,119 @@ const allData = [
         { japanese: "ネ", russian: "ネ" }
     ],
     [// индекс 140 - ノ
-        { japanese: "ノ", russian: "ノ" }
+        { japanese: "ノート", russian: "тетрадь" }
     ],
-    [// индекс 141 - null
+    [// индекс 141 - ハ
+        { japanese: "ハク", russian: "белый" }
+    ],
+    [// индекс 142 - バ
+        { japanese: "バス", russian: "автобус" }
+    ],
+    [// индекс 143 - パ
+        { japanese: "パリ", russian: "Париж" }
+    ],
+    [// индекс 144 - ヒ
+        { japanese: "ヒ", russian: "ヒ" }
+    ],
+    [// индекс 145 - ビ
+        { japanese: "ビデオ", russian: "видео" },
+        { japanese: "ビデオカセット", russian: "видеокассета" },
+        { japanese: "ビル", russian: "здание" },
+        { japanese: "ビール", russian: "пиво" }
+    ],
+    [// индекс 146 - ピ
+        { japanese: "ピ", russian: "ピ" }
+    ],
+    [// индекс 147 - フ
+        { japanese: "フランスゴ", russian: "французский язык" },
+        { japanese: "フランス", russian: "Франция" },
+        { japanese: "フランスじん", russian: "француз, француженка" }
+    ],
+    [// индекс 148 - ブ
+        { japanese: "ブ", russian: "ブ" }
+    ],
+    [// индекс 149 - プ
+        { japanese: "プ", russian: "プ" }
+    ],
+    [// индекс 150 - ヘ
+        { japanese: "ヘ", russian: "ヘ" }
+    ],
+    [// индекс 151 - ベ
+        { japanese: "ベ", russian: "ベ" }
+    ],
+    [// индекс 152 - ペ
+        { japanese: "ペテルブルガ", russian: "Петербург" }
+    ],
+    [// индекс 153 - ホ
+        { japanese: "ホテル", russian: "отель" },
+        { japanese: "ホン", russian: "книга" },
+        { japanese: "ホウ", russian: "сторона, направление" }
+    ],
+    [// индекс 154 - ボ
+        { japanese: "ボ", russian: "мама" },
+        { japanese: "ボク", russian: "дерево" }
+    ],
+    [// индекс 155 - ポ
+        { japanese: "ポ", russian: "ポ" }
+    ],
+    [// индекс 156 - マ
+        { japanese: "マーク", russian: "знак, обозначение" }
+    ],
+    [// индекс 157 - ミ
+        { japanese: "ミョウ", russian: "светлый" }
+    ],
+    [// индекс 158 - ム
+        { japanese: "ム", russian: "ム" }
+    ],
+    [// индекс 159 - メ
+        { japanese: "メイ", russian: "светлый" }
+    ],
+    [// индекс 160 - モ
+        { japanese: "モク", russian: "дерево" },
+        { japanese: "モスクワ", russian: "Москва" },
+    ],
+    [// индекс 161 - null
         { japanese: "0", russian: "0" }
     ],
-    [// индекс 142 - null
+    [// индекс 162 - ヤ
+        { japanese: "ヤ", russian: "ヤ" }
+    ],
+    [// индекс 163 - null
         { japanese: "0", russian: "0" }
     ],
-    [// индекс 143 - null
+    [// индекс 164 - ユ
+        { japanese: "ユ", russian: "ユ" }
+    ],
+    [// индекс 165 - null
         { japanese: "0", russian: "0" }
     ],
-    [// индекс 144 - null
+    [// индекс 166 - ヨ
+        { japanese: "ヨ", russian: "ヨ" }
+    ],
+    [// индекс 167 - ラ
+        { japanese: "ラジオ", russian: "радио" }
+    ],
+    [// индекс 168 - リ
+        { japanese: "リヨン", russian: "Лион (город во Франции)" }
+    ],
+    [// индекс 169 - ル
+        { japanese: "ル", russian: "ル" }
+    ],
+    [// индекс 170 - レ
+        { japanese: "レ", russian: "レ" }
+    ],
+    [// индекс 171 - ロ 
+        { japanese: "ロシア", russian: "Россия" },
+        { japanese: "ロシアゴ", russian: "Русский язык" },
+        { japanese: "ロシアじん", russian: "русский, русская" }
+    ],
+    [// индекс 172 - null
         { japanese: "0", russian: "0" }
     ],
-    [// индекс 145 - null
+    [// индекс 173 - null
         { japanese: "0", russian: "0" }
     ],
-    [// индекс 146 - null
+    [// индекс 174 - null
         { japanese: "0", russian: "0" }
     ]
 ];
