@@ -68,6 +68,10 @@ body {
     gap: 30px;
 }
 
+.search {
+    margin-bottom: 50px;
+}
+
 /* Карточки алфавитов */
 .alphabet__card {
     padding: 35px 30px;

@@ -90,6 +90,10 @@ body {
     margin: 20px 0;
 }
 
+.navigation__main.search {
+    justify-content: center;
+}
+
 .navigation__cards-btn {
     padding: 12px 25px;
     border: none;
