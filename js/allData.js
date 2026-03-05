@@ -706,7 +706,9 @@ const allData = [
         { japanese: "ココア", russian: "какао(напиток)" },
         { japanese: "コーチ", russian: "тренер" },
         { japanese: "コクコ", russian: "кокс" },
-        { japanese: "コスト", russian: "расходы(cost)" }
+        { japanese: "コスト", russian: "расходы(cost)" },
+        { japanese: "コンピューター", russian: "компьютер" },
+        { japanese: "コッブ", russian: "чашка" }
     ],
     [// индекс 114 - ゴ
         { japanese: "ゴ", russian: "язык, речь" }
@@ -740,7 +742,8 @@ const allData = [
         { japanese: "スター", russian: "звезда" },
         { japanese: "スーツ", russian: "костюм" },
         { japanese: "スチージ", russian: "сцена" },
-        { japanese: "スタート", russian: "старт" }
+        { japanese: "スタート", russian: "старт" },
+        { japanese: "スペイン", russian: "Испания" }        
     ],
     [// индекс 120 - ズ
         { japanese: "ズ", russian: "ズ" }
@@ -805,7 +808,8 @@ const allData = [
     ],
     [// индекс 135 - ド
         { japanese: "ドア", russian: "дверь" },
-        { japanese: "ドクタ", russian: "врач, доктор" }
+        { japanese: "ドクタ", russian: "врач, доктор" },
+        { japanese: "ドール", russian: "доллар" }
     ],
     [// индекс 136 - ナ
         { japanese: "ナン", russian: "мужчина" }
@@ -848,7 +852,8 @@ const allData = [
     [// индекс 147 - フ
         { japanese: "フランスゴ", russian: "французский язык" },
         { japanese: "フランス", russian: "Франция" },
-        { japanese: "フランスじん", russian: "француз, француженка" }
+        { japanese: "フランスじん", russian: "француз, француженка" },
+        { japanese: "ファッション", russian: "мода" }
     ],
     [// индекс 148 - ブ
         { japanese: "ブ", russian: "ブ" }
@@ -860,7 +865,7 @@ const allData = [
         { japanese: "ヘ", russian: "ヘ" }
     ],
     [// индекс 151 - ベ
-        { japanese: "ベ", russian: "ベ" }
+        { japanese: "ベッド", russian: "кровать" }
     ],
     [// индекс 152 - ペ
         { japanese: "ペテルブルガ", russian: "Петербург" }
@@ -918,7 +923,7 @@ const allData = [
         { japanese: "リヨン", russian: "Лион (город во Франции)" }
     ],
     [// индекс 169 - ル
-        { japanese: "ル", russian: "ル" }
+        { japanese: "ルブル", russian: "рубль" }
     ],
     [// индекс 170 - レ
         { japanese: "レ", russian: "レ" }
