@@ -170,7 +170,7 @@ const allData = [
         { japanese: "がっき", russian: "музыкальный инструмент, учебный семестр" }
     ],
     [// индекс 11 - き
-        { japanese: "き kun: 木", russian: "дерево" },
+        { japanese: "き", russian: "дерево" },
         { japanese: "きく", russian: "хризантема" },
         { japanese: "きゃうと", russian: "Киото" },
         { japanese: "きれい（な）", russian: "чистый, красивый" },
@@ -345,7 +345,7 @@ const allData = [
         { japanese: "ちがいます", russian: "ошибаетесь" },
         { japanese: "ち`い`さ`い", russian: "маленький" },
         { japanese: "`ちず", russian: "карта" },
-        { japanese: "ちかい", russian: "близкий" },
+        { japanese: "ちかい", russian: "близкий, ближний (о расстоянии)" },
         { japanese: "`ちち", russian: "отец" },
         { japanese: "ち`た`い", russian: "область" },
         { japanese: "ちゅうごく", russian: "Китай" },
@@ -399,7 +399,7 @@ const allData = [
         { japanese: "どこの", russian: "откуда" }
     ],
     [// индекс 40 - な
-        { japanese: "なま", russian: "свежый, сырой" },
+        { japanese: "なま", russian: "свежий, сырой" },
         { japanese: "なん", russian: "что" },
         { japanese: "なに", russian: "что" },
         { japanese: "なにご", russian: "какой язык" },
@@ -673,7 +673,7 @@ const allData = [
         { japanese: "0", russian: "0" }
     ],
     [// индекс 102 - エ
-        { japanese: "エイ (on )", russian: "Англия (в сочетании)" },
+        { japanese: "エイ", russian: "Англия (в сочетании)" },
         { japanese: "エア", russian: "воздух (air)" }
     ],
     [// индекс 103 - null
@@ -909,7 +909,7 @@ const allData = [
     ],
     [// индекс 154 - ボ
         { japanese: "ボ", russian: "мама" },
-        { japanese: "ボク on: 木", russian: "дерево" }
+        { japanese: "ボク", russian: "дерево" }
     ],
     [// индекс 155 - ポ
         { japanese: "ポ", russian: "ポ" }
@@ -927,7 +927,7 @@ const allData = [
         { japanese: "メイ", russian: "светлый" }
     ],
     [// индекс 160 - モ
-        { japanese: "モクon: 木", russian: "дерево" },
+        { japanese: "モク", russian: "дерево" },
         { japanese: "モスクワ", russian: "Москва" },
     ],
     [// индекс 161 - null
