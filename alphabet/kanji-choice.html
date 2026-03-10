@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выбор чтения</title>
+    <link rel="stylesheet" href="./../../css/style.css">
+    <link rel="stylesheet" href="./../../css/alphabet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__wrapper">
+            <div class="header__wrapper-left">
+                <h1 class="header__title" id="kanjiDisplay"></h1>
+                <p class="header__subtitle">Выберите чтение иероглифа для изучения</p>
+            </div>
+            <a href="./../index.html">
+                <button class="letters__card header__subtitle">Выбор иероглифа</button>
+            </a>    
+        </div>
+    </header>
+
+    <main class="letters">
+        <div class="container">
+            <div class="letters__wrap">
+                <section>
+                    <a href="#" class="letters__card" id="onLink">
+                        <h2 class="letters__name">on</h2>
+                    </a>
+                </section>
+                <section>
+                    <a href="#" class="letters__card" id="kunLink">
+                        <h2 class="letters__name">kun</h2>
+                    </a>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="footer-note">Создано с любовью для изучения японского языка</p>
+        </div>
+    </footer>
+
+    <script>
+        // Получаем параметр kanji из URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const kanji = urlParams.get('kanji');
+
+        // Если параметра нет — перенаправляем на страницу со списком иероглифов
+        if (!kanji) {
+            alert('Иероглиф не указан');
+            window.location.href = './../index.html'; // путь к списку иероглифов
+        }
+
+        // Отображаем иероглиф в заголовке
+        document.getElementById('kanjiDisplay').textContent = kanji;
+
+        // Формируем ссылки на страницу карточек с параметрами
+        const onLink = document.getElementById('onLink');
+        const kunLink = document.getElementById('kunLink');
+
+        onLink.href = `./cards.html?kanji=${encodeURIComponent(kanji)}&reading=on`;
+        kunLink.href = `./cards.html?kanji=${encodeURIComponent(kanji)}&reading=kun`;
+    </script>
+</body>
+</html>

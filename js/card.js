@@ -1,36 +1,77 @@
+// --------------------------------------------------------------
+// 0. ПЕРЕМЕННЫЕ (объявляем let, чтобы можно было перезаписать)
+// --------------------------------------------------------------
+let cardsToRender = [];          // исходный массив карточек (будет заполнен позже)
+let shuffledCards = [];          // перемешанная колода
+let currentCardIndex = 0;        // текущий индекс
 
 // --------------------------------------------------------------
-// 1. ИСХОДНЫЙ МАССИВ ДАННЫХ (твой, без изменений)
+// 1. ОПРЕДЕЛЯЕМ РЕЖИМ: кандзи или обычный
 // --------------------------------------------------------------
+const urlParams = new URLSearchParams(window.location.search);
+const kanji = urlParams.get('kanji');
+const reading = urlParams.get('reading');
 
+if (kanji && reading) {
+    // -------------------- РЕЖИМ КАНДЗИ --------------------
+    // Ищем иероглиф в kanjiData (этот файл должен быть подключен)
+    const kanjiObj = kanjiData.find(item => item.kanji === kanji);
+    if (!kanjiObj) {
+        alert('Иероглиф не найден в базе');
+        cardsToRender = [];
+    } else {
+        // Берём нужный массив (он или кун)
+        cardsToRender = (reading === 'on') ? kanjiObj.on : kanjiObj.kun;
+        if (!cardsToRender || cardsToRender.length === 0) {
+            alert('Нет карточек для этого чтения');
+            cardsToRender = [];
+        }
+    }
 
+    // Настраиваем навигационные ссылки (если они есть на странице)
+    const navLink1 = document.getElementById('navLink1');
+    const navLink2 = document.getElementById('navLink2');
+    if (navLink1) {
+        navLink1.href = `./kanji-choice.html?kanji=${encodeURIComponent(kanji)}`;
+        navLink1.textContent = 'чтения';
+    }
+    if (navLink2) {
+        navLink2.href = './../alphabet/kanji.html';  // путь к странице со списком иероглифов
+        navLink2.textContent = 'иероглифы';
+    }
+} else {
+    // -------------------- ОБЫЧНЫЙ РЕЖИМ (хирагана/катакана) --------------------
+    // Получаем текущую букву из заголовка
+    const titleElement = document.getElementById('pageTitle');
+    if (!titleElement) {
+        console.error('Элемент #pageTitle не найден');
+        cardsToRender = [];
+    } else {
+        const textfromTitle = titleElement.textContent;
+        const currentLetter = textfromTitle[0]; // например 'あ'
+        // Используем существующую функцию для получения карточек по букве
+        cardsToRender = getCardsByLetter(currentLetter) || [];
+    }
+}
+
+console.log('Исходные карточки:', cardsToRender);
 
 // --------------------------------------------------------------
-// 2. ОПРЕДЕЛЯЕМ ТЕКУЩУЮ БУКВУ ИЗ ЗАГОЛОВКА (твой код)
-// --------------------------------------------------------------
-const titleElement = document.getElementById('pageTitle');
-const textfromTitle = titleElement.textContent;
-const currentLetter = textfromTitle[0]; // например 'А' (или 'A' — зависит от заголовка)
-
-// --------------------------------------------------------------
-// 3. ПОЛУЧАЕМ МАССИВ КАРТОЧЕК ДЛЯ ЭТОЙ БУКВЫ (твоя функция)
+// 2. ФУНКЦИЯ ПОЛУЧЕНИЯ КАРТОЧЕК ПО БУКВЕ (для обычного режима)
 // --------------------------------------------------------------
 function getCardsByLetter(letter) {
-    
-    // ВНИМАНИЕ: если у тебя русская буква, замени 'A' на 'А' (русскую)
+    // ВНИМАНИЕ: если заголовок на русском, замени 'あ' на 'А' (русскую)
     const alphabetIndex = letter.toUpperCase().charCodeAt(0) - 'あ'.charCodeAt(0);
-    console.log(alphabetIndex)
+    console.log('Индекс буквы:', alphabetIndex);
+    // Предполагается, что allData объявлен глобально (в allData.js)
     return allData[alphabetIndex] || [];
 }
 
-const cardsToRender = getCardsByLetter(currentLetter); // оригинальный массив (не трогаем)
-console.log('Оригинальные карточки:', cardsToRender);
-
 // --------------------------------------------------------------
-// 4. НОВОЕ: ФУНКЦИЯ ПЕРЕМЕШИВАНИЯ (алгоритм Фишера–Йетса)
+// 3. ФУНКЦИЯ ПЕРЕМЕШИВАНИЯ (алгоритм Фишера–Йетса)
 // --------------------------------------------------------------
 function shuffleArray(arr) {
-    const copy = [...arr]; // работаем с копией, оригинал не меняем
+    const copy = [...arr];
     for (let i = copy.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [copy[i], copy[j]] = [copy[j], copy[i]];
@@ -39,31 +80,25 @@ function shuffleArray(arr) {
 }
 
 // --------------------------------------------------------------
-// 5. НОВОЕ: ПЕРЕМЕШАННАЯ КОЛОДА И УПРАВЛЕНИЕ ЕЮ
+// 4. УПРАВЛЕНИЕ КОЛОДОЙ
 // --------------------------------------------------------------
-let shuffledCards = [];          // сюда сложим перемешанные карточки
-let currentCardIndex = 0;       // твой индекс – он теперь относится к shuffledCards
-
-// Создаём новую перемешанную колоду и сбрасываем индекс
 function reshuffleDeck() {
     shuffledCards = shuffleArray(cardsToRender);
     currentCardIndex = 0;
-    updateCard();               // сразу показываем первую карточку
+    updateCard();
     console.log('Колода перемешана:', shuffledCards);
 }
 
 // --------------------------------------------------------------
-// 6. РАБОТА С DOM (всё твоё, только заменён cardsToRender на shuffledCards)
+// 5. РАБОТА С DOM
 // --------------------------------------------------------------
 const flashcardElement = document.getElementById('flashcard');
 const frontTextElement = document.getElementById('front-text');
 const backTextElement = document.getElementById('back-text');
 const statusElement = document.getElementById('status');
 
-// Функция отображения текущей карточки (берёт данные из shuffledCards)
 function updateCard() {
     if (!shuffledCards.length) {
-        // если колода пуста (например, нет карточек для буквы)
         frontTextElement.textContent = 'Нет карточек';
         backTextElement.textContent = 'Нет карточек';
         statusElement.textContent = '0 из 0';
@@ -71,16 +106,18 @@ function updateCard() {
     }
 
     flashcardElement.classList.remove('flipped');
-    // проверка условия: 
-    // если нажата кнопка японско-русский: лицевая сторона япон., изнаночная рус; 
-    // если же нажата кнопка русско-японский: лицевая сторона рус., изнаночная япон; 
+
+    // Переменная stateBtn должна быть определена в change.js (глобально)
     if (stateBtn) {
+        // Японско-русский
         frontTextElement.textContent = shuffledCards[currentCardIndex].japanese;
         backTextElement.textContent = shuffledCards[currentCardIndex].russian;
     } else {
+        // Русско-японский
         frontTextElement.textContent = shuffledCards[currentCardIndex].russian;
         backTextElement.textContent = shuffledCards[currentCardIndex].japanese;
     }
+
     statusElement.textContent = `Карточка ${currentCardIndex + 1} из ${shuffledCards.length}`;
 }
 
@@ -89,18 +126,17 @@ function flipCard() {
     flashcardElement.classList.toggle('flipped');
 }
 
-// Вперёд (без повторов, пока не кончится колода)
+// Вперёд
 function nextCard() {
     if (currentCardIndex < shuffledCards.length - 1) {
         currentCardIndex++;
         updateCard();
     } else {
-       alert('Вы достигли конца колоды!'); // здесь можно добавить авто‑перемешивание
-    //    reshuffleDeck(); // раскомментируй, если хочешь автоматически начинать заново
+        alert('Вы достигли конца колоды!');
     }
 }
 
-// Назад (просто листаем уже перемешанную колоду)
+// Назад
 function prevCard() {
     if (currentCardIndex > 0) {
         currentCardIndex--;
@@ -109,13 +145,9 @@ function prevCard() {
 }
 
 // --------------------------------------------------------------
-// 7. СТАРТ ПРИ ЗАГРУЗКЕ СТРАНИЦЫ
+// 6. СТАРТ ПРИ ЗАГРУЗКЕ СТРАНИЦЫ
 // --------------------------------------------------------------
 window.onload = function() {
-    reshuffleDeck(); // перемешиваем и показываем первую случайную карточку
-    console.log('changeStateBtn', stateBtn);
+    reshuffleDeck();
+    console.log('stateBtn:', typeof stateBtn !== 'undefined' ? stateBtn : 'не определена');
 };
-
-
-
-

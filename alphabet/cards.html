@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карточки</title>
+    <link rel="stylesheet" href="./../css/card.css">
+    <link rel="stylesheet" href="./../css/style.css">
+</head>
+<body>
+    <div>
+        <!-- Переключатели (пока не используются, но можно оставить) -->
+        <div class="navigation__main">
+            <button type="button" class="navigation__main-btn tabs__button active">Японско-русский</button>
+            <button type="button" class="navigation__main-btn tabs__button">Русско-японский</button>
+        </div>
+
+        <!-- Контейнер с карточкой -->
+        <div class="card-container">
+            <div class="card" id="flashcard" onclick="flipCard()">
+                <div class="card-front" id="front-text">こんにちは</div>
+                <div class="card-back" id="back-text">Здравствуйте</div>
+            </div>
+        </div>
+
+        <!-- Панель навигации -->
+        <div class="navigation">
+            <div class="navigation__cards">
+                <button class="navigation__cards-btn" onclick="prevCard()">← Назад</button>
+                <span id="status">Карточка 1 из 3</span>
+                <button class="navigation__cards-btn" onclick="nextCard()">Вперёд →</button>
+            </div>
+            <div class="navigation__main" id="navLinks">
+                <!-- Две ссылки будут заполнены скриптом в зависимости от режима -->
+                <a href="#" id="navLink1" class="navigation__main-btn">...</a>
+                <button class="navigation__main-btn" onclick="reshuffleDeck()">Перемешать</button>
+                <a href="#" id="navLink2" class="navigation__main-btn">...</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Скрипты (порядок важен) -->
+    <script src="./../js/change.js"></script>           <!-- если нужен -->
+    <script src="./../js/allData.js"></script>         <!-- данные для хираганы/катаканы -->
+    <script src="./../js/kanjiData.js"></script>       <!-- данные для кандзи (создай его) -->
+    <script src="./../js/card.js"></script>            <!-- обновлённый файл -->
+</body>
+</html>

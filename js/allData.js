@@ -170,7 +170,7 @@ const allData = [
         { japanese: "がっき", russian: "музыкальный инструмент, учебный семестр" }
     ],
     [// индекс 11 - き
-        { japanese: "き", russian: "дерево" },
+        { japanese: "き kun: 木", russian: "дерево" },
         { japanese: "きく", russian: "хризантема" },
         { japanese: "きゃうと", russian: "Киото" },
         { japanese: "きれい（な）", russian: "чистый, красивый" },
@@ -909,7 +909,7 @@ const allData = [
     ],
     [// индекс 154 - ボ
         { japanese: "ボ", russian: "мама" },
-        { japanese: "ボク", russian: "дерево" }
+        { japanese: "ボク on: 木", russian: "дерево" }
     ],
     [// индекс 155 - ポ
         { japanese: "ポ", russian: "ポ" }
@@ -927,7 +927,7 @@ const allData = [
         { japanese: "メイ", russian: "светлый" }
     ],
     [// индекс 160 - モ
-        { japanese: "モク", russian: "дерево" },
+        { japanese: "モクon: 木", russian: "дерево" },
         { japanese: "モスクワ", russian: "Москва" },
     ],
     [// индекс 161 - null
