@@ -15,7 +15,7 @@
                 <h1 class="header__title" id="kanjiDisplay"></h1>
                 <p class="header__subtitle">Выберите чтение иероглифа для изучения</p>
             </div>
-            <a href="./../index.html">
+            <a href="./../alphabet/kanji.html">
                 <button class="letters__card header__subtitle">Выбор иероглифа</button>
             </a>    
         </div>
@@ -52,7 +52,7 @@
         // Если параметра нет — перенаправляем на страницу со списком иероглифов
         if (!kanji) {
             alert('Иероглиф не указан');
-            window.location.href = './../index.html'; // путь к списку иероглифов
+            window.location.href = './kanji.html'; // путь к списку иероглифов
         }
 
         // Отображаем иероглиф в заголовке
