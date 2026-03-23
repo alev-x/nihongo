@@ -17,8 +17,8 @@ body {
 
 /* Контейнер для 3D-эффекта. Ключевой элемент! */
 .card-container {
-    width: 400px;
-    height: 200px;
+    width: 600px;
+    height: 300px;
     /* perspective: 1000px; Задаёт глубину для 3D */
     margin-bottom: 30px;
 }
@@ -79,14 +79,14 @@ body {
 .navigation__cards {
     display: flex;
     justify-content: space-between;
-    width: 400px;
+    width: 600px;
     margin-top: 20px;
 }
 
 .navigation__main {
     display: flex;
     justify-content: space-between;
-    width: 400px;
+    width: 600px;
     margin: 20px 0;
 }
 

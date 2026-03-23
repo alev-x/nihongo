@@ -138,8 +138,10 @@ function nextCard() {
 
 // Назад
 function prevCard() {
+    // Проверяем, что индекс не выходит за пределы
     if (currentCardIndex > 0) {
         currentCardIndex--;
+        // Обновляем отображение карточки
         updateCard();
     }
 }
@@ -150,4 +152,37 @@ function prevCard() {
 window.onload = function() {
     reshuffleDeck();
     console.log('stateBtn:', typeof stateBtn !== 'undefined' ? stateBtn : 'не определена');
+};
+
+// ========== РАБОТА С ТЕСТОМ (НЕВЫУЧЕННЫЕ СЛОВА) ==========
+
+// Функция добавить текущее слово в тест
+function addToTest() {
+    if (!shuffledCards.length) {
+        alert('Нет карточки для добавления');
+        return;
+    }
+
+    // Получаем текущее слово
+    const currentWord = shuffledCards[currentCardIndex];
+    
+    // Получаем текущий список невыученных слов из localStorage
+    let testWords = JSON.parse(localStorage.getItem('testWords')) || [];
+    
+    // Проверяем, есть ли уже такое слово (сравниваем по японскому тексту)
+    const alreadyExists = testWords.some(word => word.japanese === currentWord.japanese);
+    
+    // Если слово уже есть, предупреждаем пользователя и не добавляем
+    if (alreadyExists) {
+        alert('Это слово уже в тесте!');
+        return;
+    }
+    
+    // Добавляем слово в массив
+    testWords.push(currentWord);
+    
+    // Сохраняем обратно в localStorage
+    localStorage.setItem('testWords', JSON.stringify(testWords));
+    
+    alert('Слово добавлено в тест!');
 };

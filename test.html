@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Result</title>
+    <title>Test</title>
     <link rel="stylesheet" href="./css/card.css">
     <link rel="stylesheet" href="./css/style.css">
 
@@ -12,6 +12,14 @@
 
 <body>
     <div>
+        <div class="navigation__main">
+                <button type="button" class="navigation__main-btn tabs__button active">
+                    Японско-русский
+                </button>
+                <button type="button" class="navigation__main-btn tabs__button">
+                    Русско-японский
+                </button>
+        </div>
 
         <!-- Контейнер с 3D-перспективой -->
         <div class="card-container">
@@ -34,14 +42,17 @@
                 <button class="navigation__cards-btn" onclick="nextCard()">Вперёд →</button>
             </div>
             <div class="navigation__main search">
+                <button class="navigation__main-btn" onclick="removeFromTest()">❌ Удалить из теста</button>
                 <a href="./index.html">
                     <button class="navigation__main-btn">Главная страница</button>
                 </a>
+                <button class="navigation__main-btn" onclick="reshuffleDeck()">🔄 Перемешать</button>
             </div>
         </div>
     </div>
 
-    <script src="./js/search.js"></script>
+    <script src="./js/change.js"></script>
+    <script src="./js/test.js"></script>
 </body>
 </html>
 
