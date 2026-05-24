@@ -14,7 +14,7 @@ const allData = [
         { japanese: "あなた", russian: "ты" },
         { japanese: "あなたたち", russian: "вы" },
         { japanese: "あちら", russian: "вон та сторона" },
-        { japanese: "あかるい", russian: "светлый, ясный" },
+        { japanese: "あかるい", russian: "светлый, ясный, жизнерадостный" },
         { japanese: "あまり", russian: "(не)очень, слишком" },
         { japanese: "あきらか（な）", russian: "очевидный, ясный" },
         { japanese: "あける", russian: "рассветать" },
@@ -33,7 +33,10 @@ const allData = [
         { japanese: "あのひと", russian: "он, она, тот человек" },
         { japanese: "あい", russian: "любовь" },
         { japanese: "ありがとうございます", russian: "большое спасибо" },
-        { japanese: "あまい", russian: "сладкий; мягкий/нестрогий; наивный/оптимистический" }
+        { japanese: "あまい", russian: "сладкий; мягкий/нестрогий; наивный/оптимистический" },
+        { japanese: "あさごはん", russian: "завтрак" },
+        { japanese: "あたらしい/新しい", russian: "новый, недавний" },
+        { japanese: "あびます", russian: "принимать" }
     ],
     [// индекс 1 --- null ---
         { japanese: "0", russian: "0" }
@@ -50,14 +53,18 @@ const allData = [
         { japanese: "`いし/いしゃ", russian: "врач" },
         { japanese: "い`し", russian: "камень" },
         { japanese: "`いち", russian: "местоположение" },
-        { japanese: "い`ち", russian: "один" },
+        { japanese: "い`ち/ 一", russian: "один/1" },
         { japanese: "`いぎ", russian: "значение" },
         { japanese: "いそがしい", russian: "быть занятым" },
         { japanese: "いきおい", russian: "сила, мощь; неизбежно" },
         { japanese: "いす", russian: "стул" },
         { japanese: "いく", russian: "иду, идешь (глаг)" },
         { japanese: "いう", russian: "говорить, сказать, называться (глаг)" },
-        { japanese: "いちにち", russian: "один день; целый день, первое число месяца" }
+        { japanese: "いちにち", russian: "один день; целый день, первое число месяца" },
+        { japanese: "いちじ", russian: "один час" },
+        { japanese: "いま", russian: "сейчас" },
+        { japanese: "いくら", russian: "сколько (денег)" },
+        { japanese: "いつも", russian: "всегда" }
     ],
     [// индекс 3 --- ПУСТО ---
         { japanese: "0", russian: "0" }
@@ -129,7 +136,14 @@ const allData = [
         { japanese: "およぐ", russian: "плавать" },
         { japanese: "おもい", russian: "тяжелый; мысль, думы" },
         { japanese: "おと", russian: "звук" },
-        { japanese: "おっと", russian: "муж" }
+        { japanese: "おっと", russian: "муж" },
+        { japanese: "おおさか", russian: "Осака(город в Японии)" },
+        { japanese: "おもしろい", russian: "интересный, увлекательный" },
+        { japanese: "おしゃれ", russian: "модный, стильный, со вкусом" },
+        { japanese: "おんがく", russian: "музыка" },
+        { japanese: "おなまえは [ва]", russian: "как тебя зовут?" },
+        { japanese: "およぎます", russian: "плавать" },
+        { japanese: "おきます", russian: "вставать" }
     ],
     [// индекс 9 - か
         { japanese: "かんじ", russian: "иероглиф" },
@@ -160,14 +174,21 @@ const allData = [
         { japanese: "かいしゃ", russian: "компания, фирма, корпорация" },
         { japanese: "かぎ", russian: "ключи" },
         { japanese: "かた", russian: "плечи" },
-        { japanese: "-", russian: "-" }
+        { japanese: "かっこいい", russian: "крутой" },
+        { japanese: "かわいい", russian: "милый" },
+        { japanese: "かれし", russian: "парень, возлюбленный" },
+        { japanese: "かのじょ", russian: "девушка, возлюбленная" },
+        { japanese: "かいます / 買います", russian: "покупать, купить" },
+        { japanese: "からて", russian: "каратэ" }
     ],
     [// индекс 10 - が
         { japanese: "がわ", russian: "река; в названии рек" },
         { japanese: "がっこう", russian: "школа" },
         { japanese: "がくせい", russian: "студент, учащийся" },
         { japanese: "が`か", russian: "художник" },
-        { japanese: "がっき", russian: "музыкальный инструмент, учебный семестр" }
+        { japanese: "がっき", russian: "музыкальный инструмент, учебный семестр" },
+        { japanese: "がほしい", russian: "я хочу + предмет" },
+        { japanese: "がすきです", russian: "мне нравится + предмет / я люблю + предмет" }
     ],
     [// индекс 11 - き
         { japanese: "き", russian: "дерево" },
@@ -181,7 +202,9 @@ const allData = [
         { japanese: "きゅう", russian: "девять - 9" },
         { japanese: "きゅうひゃく", russian: "900" },
         { japanese: "きょうしつ", russian: "аудитория [кё:щицу]" },
-        { japanese: "きゅうせん", russian: "9000" }
+        { japanese: "きゅうせん", russian: "9000" },
+        { japanese: "きっぷ", russian: "билет" },
+        { japanese: "ききます", russian: "слушать" }
     ],
     [// индекс 12 - ぎ
         { japanese: "`ぎかい", russian: "парламент, сессия парламента" }
@@ -199,7 +222,8 @@ const allData = [
         { japanese: "くうこう", russian: "аэропорт" },
         { japanese: "くつ", russian: "обувь" },
         { japanese: "くるま", russian: "машина" },
-        { japanese: "く", russian: "девять - 9" }
+        { japanese: "く", russian: "девять - 9" },
+        { japanese: "ください", russian: "пожалуйста (просьба)" }
     ],
     [// индекс 14 - ぐ
         { japanese: "ぐ`あ`い", russian: "обстоятельства" }
@@ -241,7 +265,9 @@ const allData = [
         { japanese: "ご`う`い", russian: "согласие" },
         { japanese: "`ご", russian: "пять - 5" },
         { japanese: "ごひゃく", russian: "500" },
-        { japanese: "ごせん", russian: "5000" }
+        { japanese: "ごせん", russian: "5000" },
+        { japanese: "ごはん", russian: "рис / еда" },
+        { japanese: "ごろ", russian: "примерно, около" }
     ],
     [// индекс 19 - さ
         { japanese: "さん", russian: "господин, госпожа" },
@@ -254,7 +280,9 @@ const allData = [
         { japanese: "さようなら", russian: "до свидание" },
         { japanese: "さん", russian: "три - 3" },
         { japanese: "さんびゃく", russian: "300" },
-        { japanese: "さんぜん", russian: "300" }
+        { japanese: "さんぜん", russian: "3000" },
+        { japanese: "さい", russian: "возраст (лет, годов)" },
+        { japanese: "さんじ", russian: "3 часа" }
     ],
     [// индекс 20 - ざ
         { japanese: "ざっし", russian: "журнал" },
@@ -265,7 +293,7 @@ const allData = [
         { japanese: "しんぶん", russian: "газета" },
         { japanese: "しろい/しろ", russian: "белый" },
         { japanese: "しつれいですが", russian: "прошу прощения" },
-        { japanese: "し`ち", russian: "семь" },
+        { japanese: "し`ち / 七", russian: "семь / 7" },
         { japanese: "`しじ", russian: "поддержка" },
         { japanese: "`しさ", russian: "указание" },
         { japanese: "し`き`ち", russian: "площадка" },
@@ -274,7 +302,10 @@ const allData = [
         { japanese: "しき", russian: "моральный дух" },
         { japanese: "しなもの", russian: "товар, вещь" },
         { japanese: "し", russian: "четыри - 4" },
-        { japanese: "しょくどう", russian: "столовая [щёкудо:]" }
+        { japanese: "しょくどう", russian: "столовая [щёкудо:]" },
+        { japanese: "します", russian: "играть" },
+        { japanese: "しゅっしん", russian: "родом (из)" },
+        { japanese: "しちじ / 七時", russian: "7 часов" }
     ],
     [// индекс 22 - じ
         { japanese: "じどうしゃ", russian: "машина" },
@@ -288,7 +319,10 @@ const allData = [
         { japanese: "じゅうどう", russian: "дзюдо" },
         { japanese: "じしょ", russian: "словарь" },
         { japanese: "じゅう", russian: "десять - 10" },
-        { japanese: "じむしょ", russian: "офис [джимущё]" }
+        { japanese: "じむしょ", russian: "офис [джимущё]" },
+        { japanese: "じゃない", russian: "не является" },
+        { japanese: "じゅうに / 十二", russian: "12" },
+        { japanese: "じゅういち / 十一", russian: "11" }
     ],
     [// индекс 23 - す
         { japanese: "すみませんが", russian: "простите (используется, если кого-то окликаете или обращаетесь к незнакомцу" },
@@ -298,7 +332,8 @@ const allData = [
         { japanese: "す`う`し", russian: "числительные" },
         { japanese: "す`う`じ", russian: "цифра" },
         { japanese: "すし", russian: "суши (рис с рыбой)" },
-        { japanese: "すみません", russian: "извините" }
+        { japanese: "すみません", russian: "извините" },
+        { japanese: "すき", russian: "любить" }
     ],
     [// индекс 24 - ず
         { japanese: "`ずが", russian: "чертеж" },
@@ -313,7 +348,7 @@ const allData = [
         { japanese: "せ`い`ざ`い", russian: "препарат (медицина)" },
         { japanese: "せなか", russian: "спина" },
         { japanese: "せっけい", russian: "мыло" },
-        { japanese: "せん", russian: "1000" }
+        { japanese: "せん / 千", russian: "1000" }
     ],
     [// индекс 26 - ぜ
         { japanese: "`ぜき", russian: "борец сумо" }
@@ -326,7 +361,8 @@ const allData = [
         { japanese: "そちら", russian: "та сторона" },
         { japanese: "そして (и опускается)", russian: "и" },
         { japanese: "そっぽ", russian: "сторона, направление вбок" },
-        { japanese: "そうですか", russian: "понятно, понял" }
+        { japanese: "そうですか", russian: "понятно, понял" },
+        { japanese: "そうです", russian: "согласен, вы правы" }
     ],
     [// индекс 28 - ぞ
         { japanese: "ぞ`くご", russian: "просторечие" }
@@ -334,6 +370,8 @@ const allData = [
     [// индекс 29 - た 
         { japanese: "た`かい", russian: "высокий, дорогой(о цене)" },
         { japanese: "たてもの", russian: "здание" },
+        { japanese: "たべます / 食べます", russian: "есть, принимать пищу" }
+
     ],
     [// индекс 30 - だ
         { japanese: "だ`い`が`く", russian: "университет, институт" },
@@ -349,7 +387,10 @@ const allData = [
         { japanese: "`ちち", russian: "отец" },
         { japanese: "ち`た`い", russian: "область" },
         { japanese: "ちゅうごく", russian: "Китай" },
-        { japanese: "ちゅうしゃ", russian: "инъекция" }
+        { japanese: "ちゅうしゃ", russian: "инъекция" },
+        { japanese: "ちかてつ", russian: "метро" },
+        { japanese: "Тシャツ", russian: "футболка" },
+        { japanese: "ちょっと", russian: "немного" }
     ],
     [// индекс 32 - ぢ
         { japanese: "ぢ", russian: "ぢ" }
@@ -360,18 +401,20 @@ const allData = [
     [// индекс 34 - つ
         { japanese: "つぎ", russian: "следующий" },
         { japanese: "つづく", russian: "продолжаться" },
-        { japanese: "つつむ", russian: "заворачивать, упаковывать" }
+        { japanese: "つつむ", russian: "заворачивать, упаковывать" },
+        { japanese: "つくります", russian: "готовить" }
     ],
     [// индекс 35 - づ
         { japanese: "づ", russian: "づ" }
     ],
     [// индекс 36 - て
-        { japanese: "て", russian: "て" }
+        { japanese: "てぶくろ", russian: "перчатки" }
     ],
     [// индекс 37 - で
         { japanese: "ではありません", russian: "отрицательная форма" },
         { japanese: "です", russian: "утвердительная форма" },
-        { japanese: "でんわ", russian: "телефон" }
+        { japanese: "でんわ", russian: "телефон" },
+        { japanese: "でかけます", russian: "выходить, ехать" }
     ],
     [// индекс 38 - と
         { japanese: "ともだち", russian: "друг" },
@@ -380,7 +423,10 @@ const allData = [
         { japanese: "とても", russian: "очень" },
         { japanese: "とけい", russian: "часы" },
         { japanese: "ときょう", russian: "система кронштейнов в японских храмах" },
-        { japanese: "としょかん", russian: "библиотека" }
+        { japanese: "としょかん", russian: "библиотека" },
+        { japanese: "とし", russian: "город, год" },
+        { japanese: "ときどき", russian: "иногда" },
+        { japanese: "といいます / と言います", russian: "Меня зовут..." }
     ],
     [// индекс 39 - ど
         { japanese: "どこ", russian: "где, какое место" },
@@ -396,7 +442,9 @@ const allData = [
         { japanese: "どちら", russian: "какая сторона" },
         { japanese: "どんな", russian: "какой, какая" },
         { japanese: "どうたい", russian: "проводник" },
-        { japanese: "どこの", russian: "откуда" }
+        { japanese: "どこの", russian: "откуда" },
+        { japanese: "どうですか", russian: "насчет...; как дела?" },
+        { japanese: "どう", russian: "как, что" }
     ],
     [// индекс 40 - な
         { japanese: "なま", russian: "свежий, сырой" },
@@ -409,7 +457,8 @@ const allData = [
         { japanese: "なっとく", russian: "понятно, принято, убедительно" },
         { japanese: "なな", russian: "семь - 7" },
         { japanese: "ななひゃく", russian: "700" },
-        { japanese: "ななせん", russian: "7000" }
+        { japanese: "ななせん", russian: "7000" },
+        { japanese: "なんじ", russian: "который час, сколько времени" }
     ],
     [// индекс 41 - に
         { japanese: "にほん", russian: "Япония" },
@@ -420,20 +469,28 @@ const allData = [
         { japanese: "にちべい", russian: "японско-американский" },
         { japanese: "にがい", russian: "горький" },
         { japanese: "にあう", russian: "быть к лицу; быть подходящим; идти" },
-        { japanese: "に", russian: "два - 2" },
+        { japanese: "に / 二", russian: "два - 2 / в; чем" },
         { japanese: "にひゃく", russian: "200" },
-        { japanese: "にせん", russian: "200" }
+        { japanese: "にせん", russian: "2000" },
+        { japanese: "二じ", russian: "два часа, в два часа" },
+        { japanese: "にじ", russian: "радуга" },
+        { japanese: "にすんでいます", russian: "проживать" },
+        { japanese: "日本のえいが", russian: "японские фильмы" }
+        
     ],
     [// индекс 42 - ぬ
         { japanese: "ぬ", russian: "ぬ" }
     ],
     [// индекс 43 - ね
         { japanese: "れこ", russian: "кот, кошка" },
-        { japanese: "ねったい", russian: "тропики" }
+        { japanese: "ねったい", russian: "тропики" },
+        { japanese: "ね", russian: "да? не так ли?" },
+        { japanese: "ねます", russian: "ложиться спать" }
     ],
     [// индекс 44 - の
         { japanese: "のうこう", russian: "густой; крепкий; тяжелый; темный" },
-        { japanese: "の", russian: "частица принадлежности" }
+        { japanese: "の", russian: "частица принадлежности; с, возле, для" },
+        { japanese: "のみます / 飲みます", russian: "пить" }
     ],
     [// индекс 45 - は
         { japanese: "はい", russian: "да(вежливая форма)" },
@@ -447,10 +504,14 @@ const allData = [
         { japanese: "はっせい", russian: "произнесение звука, голос" },
         { japanese: "はち", russian: "восемь - 8" },
         { japanese: "はっぴゃく", russian: "800" },
-        { japanese: "はっせん", russian: "8000" }
+        { japanese: "はっせん", russian: "8000" },
+        { japanese: "はん", russian: "половина (для времени)" },
+        { japanese: "はちじ / 八時", russian: "восемь часов" },
+        { japanese: "はしります", russian: "бегать" }
     ],
     [// индекс 46 - ば
-        { japanese: "ばくはつ", russian: "взрыв" }
+        { japanese: "ばくはつ", russian: "взрыв" },
+        { japanese: "ばんごはん", russian: "ужин" }
     ],
     [// индекс 47 - ぱ
         { japanese: "ぱ", russian: "ぱ" }
@@ -463,7 +524,8 @@ const allData = [
         { japanese: "ひろい", russian: "просторный, широкий" },
         { japanese: "ひこうき", russian: "самолет" },
         { japanese: "ひっし", russian: "отчаянный, неистовый, вкладывающий все силы" },
-        { japanese: "ひゃく", russian: "числительное 100" }
+        { japanese: "ひゃく / 百", russian: "числительное 100" }, 
+        { japanese: "ひるごはん", russian: "обед" } 
     ],
     [// индекс 49 - び
         { japanese: "びゃういん", russian: "больница, клиника, врачебный кабинет" }
@@ -479,7 +541,8 @@ const allData = [
         { japanese: "ふだ", russian: "этикетка, билет, плакат" },
         { japanese: "ふせぐ", russian: "оборонять, предотвращать" },
         { japanese: "ふつか", russian: "два дня, на второй день" },
-        { japanese: "ふゆ", russian: "зима" }
+        { japanese: "ふゆ", russian: "зима" },
+        { japanese: "ふぐ", russian: "одежда" }
     ],
     [// индекс 52 - ぶ
         { japanese: "ぶどう [doy]", russian: "виноград" },
@@ -494,7 +557,9 @@ const allData = [
         { japanese: "へや", russian: "комната" }
     ],
     [// индекс 55 - べ
-        { japanese: "べっそ", russian: "дача, вилла" }
+        { japanese: "べっそ", russian: "дача, вилла" },
+        { japanese: "べんとう", russian: "бэнто (обед в коробке)" },
+        { japanese: "べんごし", russian: "юрист, адвокат" }
     ],
     [// индекс 56 - ぺ
         { japanese: "ぺん", russian: "ручка" },
@@ -520,13 +585,21 @@ const allData = [
         { japanese: "まで", russian: "окно" },
         { japanese: "までガラス", russian: "оконное стекло" },
         { japanese: "まだ", russian: "еще не" },
-        { japanese: "まん", russian: "10000" }
+        { japanese: "まん", russian: "10000" },
+        { japanese: "まんが", russian: "манга (комикс)" },
+        { japanese: "またあした", russian: "до завтра" },
+        { japanese: "まいばん", russian: "каждый вечер" },
+        { japanese: "まいあさ", russian: "каждое утро" },
+        { japanese: "まいにち", russian: "каждый день" },
+        { japanese: "まいしゅう", russian: "каждую неделю" }
     ],
     [// индекс 61 - み
         { japanese: "みず", russian: "вода" },
         { japanese: "みなさん", russian: "все, вы(обращение к группе людей)" },
         { japanese: "みじかい", russian: "короткий" },
-        { japanese: "みょうじ", russian: "фамилия" }
+        { japanese: "みょうじ", russian: "фамилия" },
+        { japanese: "みます / 見ます", russian: "смотреть" },
+        { japanese: "みせ", russian: "магазин" }
     ],
     [// индекс 62 - む
         { japanese: "むすこ", russian: "сын" }
@@ -545,7 +618,9 @@ const allData = [
     [// индекс 66 - や
         { japanese: "やま", russian: "гора" },
         { japanese: "やすい", russian: "дешевый, спокойный, устойчивый" },
-        { japanese: "やきにく", russian: "жареное мясо" }
+        { japanese: "やきにく", russian: "жареное мясо" },
+        { japanese: "やきゅう", russian: "бейсбол" },
+        { japanese: "やさしい", russian: "добрый" },
     ],
     [// индекс 67 - null
         { japanese: "0", russian: "0" }
@@ -562,10 +637,13 @@ const allData = [
         { japanese: "よむ", russian: "читать" },
         { japanese: "よん", russian: "четыри - 4" },
         { japanese: "よんひゃく", russian: "400" },
-        { japanese: "よんせん", russian: "4000" }
+        { japanese: "よんせん", russian: "4000" },
+        { japanese: "よみます / 読みます", russian: "Вежл.форм. читаю / буду читать" },
+        { japanese: "よく", russian: "часто" },
+        { japanese: "四時 / よじ", russian: "4 часа" }
     ],
     [// индекс 71 - ら
-        { japanese: "ら", russian: "ら" }
+        { japanese: "らいしゅう", russian: "следующая неделя" }
     ],
     [// индекс 72 - り
         { japanese: "りっぱ（な）", russian: "прекрасный" }
@@ -579,7 +657,8 @@ const allData = [
     [// индекс 75 - ろ
         { japanese: "ろく", russian: "шесть - 6" },
         { japanese: "ろっぴゃく", russian: "600" },
-        { japanese: "ろくせん", russian: "6000" }
+        { japanese: "ろくせん", russian: "6000" },
+        { japanese: "ろくじ / 六時", russian: "6 часов" }
     ],
     [// индекс 76 - null
         { japanese: "0", russian: "0" }
@@ -599,8 +678,8 @@ const allData = [
     [// индекс 80 - null
         { japanese: "0", russian: "0" }
     ],
-    [// индекс 81 - null
-        { japanese: "0", russian: "0" }
+    [// индекс 81 - ん
+        { japanese: "ん", russian: "ん" }
     ],
     [// индекс 82 - null
         { japanese: "0", russian: "0" }
