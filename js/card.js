@@ -152,6 +152,8 @@ function prevCard() {
 window.onload = function() {
     reshuffleDeck();
     console.log('stateBtn:', typeof stateBtn !== 'undefined' ? stateBtn : 'не определена');
+    // Устанавливаем режим карточек по умолчанию (на случай, если что-то сбилось)
+    setMode('cards');
 };
 
 // ========== РАБОТА С ТЕСТОМ (НЕВЫУЧЕННЫЕ СЛОВА) ==========
@@ -186,3 +188,69 @@ function addToTest() {
     
     alert('Слово добавлено в тест!');
 };
+
+// ========== РЕЖИМЫ: КАРТОЧКИ / СПИСОК ==========
+let currentMode = 'cards'; // 'cards' или 'list'
+
+// Находим элементы переключателя
+const modeBtns = document.querySelectorAll('.mode-btn');
+const listContainer = document.getElementById('listContainer');
+const cardContainer = document.querySelector('.card-container');
+const navigation = document.querySelector('.navigation');
+const modeToggle = document.getElementById('modeToggle');
+
+// Функция отображения списка слов
+function renderList() {
+    if (!cardsToRender || !cardsToRender.length) {
+        listContainer.innerHTML = '<p>Нет слов для отображения</p>';
+        return;
+    }
+    // Формируем таблицу
+    let html = '<table class="word-list"><thead><tr><th>Японское</th><th>Русский</th></tr></thead><tbody>';
+    cardsToRender.forEach(card => {
+        // Если режим русско-японский, меняем местами
+        const jpText = (typeof stateBtn !== 'undefined' && !stateBtn) ? card.russian : card.japanese;
+        const ruText = (typeof stateBtn !== 'undefined' && !stateBtn) ? card.japanese : card.russian;
+        html += `<tr><td>${jpText}</td><td>${ruText}</td></tr>`;
+    });
+    html += '</tbody></table>';
+    listContainer.innerHTML = html;
+    // Обновляем статус
+    statusElement.textContent = `Всего слов: ${cardsToRender.length}`;
+}
+
+// Функция переключения режима
+function setMode(mode) {
+    currentMode = mode;
+    if (mode === 'cards') {
+        if (cardContainer) cardContainer.style.display = 'block';
+        if (navigation) navigation.style.display = 'flex';
+        if (listContainer) listContainer.style.display = 'none';
+        if (modeToggle) modeToggle.style.display = 'flex'; // показываем переключатели
+        // Обновляем карточку
+        updateCard();
+        // Активируем кнопку
+        modeBtns.forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.mode === 'cards');
+        });
+    } else if (mode === 'list') {
+        if (cardContainer) cardContainer.style.display = 'none';
+        if (navigation) navigation.style.display = 'none';
+        if (listContainer) listContainer.style.display = 'block';
+        if (modeToggle) modeToggle.style.display = 'none'; // скрываем переключатели
+        // Отрисовываем список
+        renderList();
+        // Активируем кнопку
+        modeBtns.forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.mode === 'list');
+        });
+    }
+}
+
+// Обработчики на кнопки переключения
+modeBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+        const mode = this.dataset.mode;
+        setMode(mode);
+    });
+});

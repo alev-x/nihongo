@@ -76,3 +76,22 @@ document.addEventListener('DOMContentLoaded', function() {
         alert('Ошибка загрузки результатов');
     }
 });
+
+// ========== РАБОТА С ТЕСТОМ (НЕВЫУЧЕННЫЕ СЛОВА) ==========
+function addToTest() {
+    if (!shuffledCards.length) {
+        alert('Нет карточки для добавления');
+        return;
+    }
+
+    const currentWord = shuffledCards[currentCardIndex];
+    let testWords = JSON.parse(localStorage.getItem('testWords')) || [];
+    const alreadyExists = testWords.some(word => word.japanese === currentWord.japanese);
+    if (alreadyExists) {
+        alert('Это слово уже в тесте!');
+        return;
+    }
+    testWords.push(currentWord);
+    localStorage.setItem('testWords', JSON.stringify(testWords));
+    alert('Слово добавлено в тест!');
+}

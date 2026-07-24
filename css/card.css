@@ -185,3 +185,88 @@ body {
         margin-top: 10px;
     }
 }
+
+
+/* Переключатель режимов */
+.mode-switch {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+.mode-btn {
+    padding: 8px 20px;
+    border: 2px solid #4a6fa5;
+    background: transparent;
+    color: #4a6fa5;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+.mode-btn.active {
+    background: #4a6fa5;
+    color: white;
+}
+.mode-btn:hover {
+    background: #4a6fa5;
+    color: white;
+}
+
+/* Таблица списка слов */
+.word-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #1e293b;
+    border-radius: 12px;
+    overflow: hidden;
+    color: #e2e8f0; /* светлый текст */
+}
+.word-list th,
+.word-list td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #334155;
+}
+.word-list td {
+    color: #e2e8f0; /* для ячеек */
+}
+.word-list th {
+    background: #0f172a;
+    color: #94a3b8; /* более светлый для заголовков */
+    font-weight: 600;
+}
+.word-list tr:hover {
+    background: #2a3a4e;
+}
+
+
+
+
+
+/* Центрирующий контейнер для всей карточной части */
+.cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#listContainer {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+    color: #e2e8f0; /* для текста внутри контейнера */
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* отступ между блоками */
+    align-items: center;
+    width: 100%;
+}
