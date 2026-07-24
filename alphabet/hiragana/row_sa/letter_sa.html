@@ -11,49 +11,55 @@
 </head>
 <body>
     <div>
+        <div class="cards-wrapper">
+            <!-- Переключатель режимов -->
+            <div class="mode-switch">
+                <button class="mode-btn active" data-mode="cards">Карточки</button>
+                <button class="mode-btn" data-mode="list">Список</button>
+            </div>
 
-        <div class="navigation__main">
-                <button type="button" class="navigation__main-btn tabs__button active">
-                    Японско-русский
-                </button>
-                <button type="button" class="navigation__main-btn tabs__button">
-                    Русско-японский
-                </button>
-        </div>
-        
-        <!-- Контейнер с 3D-перспективой -->
-        <div class="card-container">
-            <!-- Сама карточка. По клику ей добавится класс .flipped -->
-            <div class="card" id="flashcard" onclick="flipCard()">
-                <div class="card-front" id="front-text">
-                    こんにちは
-                </div>
-                <div class="card-back" id="back-text">
-                    Здравствуйте
+        <!-- Контейнер для списка слов (изначально скрыт) -->
+            <div id="listContainer" style="display: none;"></div>
+
+            <div class="navigation__main" id="modeToggle">
+                <button type="button" class="navigation__main-btn tabs__button active">Японско-русский</button>
+                <button type="button" class="navigation__main-btn tabs__button">Русско-японский</button>
+            </div>
+
+            <!-- Контейнер с 3D-перспективой -->
+            <div class="card-container">
+                <!-- Сама карточка. По клику ей добавится класс .flipped -->
+                <div class="card" id="flashcard" onclick="flipCard()">
+                    <div class="card-front" id="front-text">
+                        こんにちは
+                    </div>
+                    <div class="card-back" id="back-text">
+                        Здравствуйте
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Панель навигации -->
-        <div class="navigation">
-            <div class="navigation__cards">
-                <button class="navigation__cards-btn" onclick="prevCard()">← Назад</button>
-                <span id="status">Карточка 1 из 3</span>
-                <button class="navigation__cards-btn" onclick="nextCard()">Вперёд →</button>
-            </div>
-            <div class="navigation__main">
-                <a href="./../row_sa.html">
-                    <button class="navigation__main-btn">Буквы</button>
-                </a>
-                <button class="navigation__main-btn" onclick="reshuffleDeck()">Перемешать</button>
-                <button class="navigation__main-btn" onclick="addToTest()">📚 Добавить в тест</button>
-                <a href="./../../hiragana.html">
-                    <button class="navigation__main-btn">Ряды</button>
-                </a>
+            <!-- Панель навигации -->
+            <div class="navigation">
+                <div class="navigation__cards">
+                    <button class="navigation__cards-btn" onclick="prevCard()">← Назад</button>
+                    <span id="status">Карточка 1 из 3</span>
+                    <button class="navigation__cards-btn" onclick="nextCard()">Вперёд →</button>
+                </div>
+                <div class="navigation__main">
+                    <a href="./../row_sa.html">
+                        <button class="navigation__main-btn">Буквы</button>
+                    </a>
+                    <button class="navigation__main-btn" onclick="reshuffleDeck()">Перемешать</button>
+                    <button class="navigation__main-btn" onclick="addToTest()">📚 Добавить в тест</button>
+                    <a href="./../../hiragana.html">
+                        <button class="navigation__main-btn">Ряды</button>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-    
+
     <script src="./../../../js/change.js"></script>
     <script src="./../../../js/allData.js"></script>
     <script src="./../../../js/card.js"></script>
